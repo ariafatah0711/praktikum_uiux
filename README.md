@@ -12,32 +12,14 @@ Nama: Aria Fatah Anom
 
 ### add your folder to another branch
 ```bash
-# pastikan di main
-git checkout main
+git remote add origin https://github.com/ariafatah0711/praktikum_uiux.git
+cd tugas_clean
 
-# buat branch baru yang benar-benar kosong (tanpa riwayat)
-git checkout --orphan praktikum_01
-
-# hapus semua file di branch baru
-git rm -rf .
-
-# copy isi folder yang kamu mau dari main
-git checkout main -- 01_praktikum_cv
-
-# pindahkan isinya ke root
-Move-Item 01_praktikum_cv\* -Destination .
-Remove-Item -Recurse -Force 01_praktikum_cv
-
-# commit dan push
-git add .
-git commit -m "Isi branch praktikum_01 hanya dari folder 01_praktikum_cv"
-git push origin praktikum_01 --force
-```
-
-```bash
 git checkout main
 git filter-repo --subdirectory-filter 01_praktikum_cv --force
 git checkout -b praktikum_01
+
+git remote add origin https://github.com/ariafatah0711/praktikum_uiux.git
 git push origin praktikum_01
 ```
 
