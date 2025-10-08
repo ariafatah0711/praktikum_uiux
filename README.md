@@ -12,15 +12,28 @@ Nama: Aria Fatah Anom
 
 ### add your folder to another branch
 ```bash
-git remote add origin https://github.com/ariafatah0711/praktikum_uiux.git
+# clone repo bersih
+git clone https://github.com/ariafatah0711/praktikum_uiux.git tugas_clean
 cd tugas_clean
 
+# pastikan di main
 git checkout main
+
+# filter repo jadi hanya folder 01_praktikum_cv
 git filter-repo --subdirectory-filter 01_praktikum_cv --force
+
+# buat branch baru dari hasil filter
 git checkout -b praktikum_01
 
+# tambahkan lagi remote
 git remote add origin https://github.com/ariafatah0711/praktikum_uiux.git
-git push origin praktikum_01
+
+# push branch hasil filter ke GitHub
+git push -u origin praktikum_01 --force
+
+# keluar dari folder dan hapus repo lokal
+cd ..
+Remove-Item -Recurse -Force .\tugas_clean
 ```
 
 delete;
