@@ -2,7 +2,7 @@
 Nama: Aria Fatah Anom
 
 ## tugas praktikum
-- [sc_tugas_praktikumm_1](./01_praktikum_cv/) - [preview](https://ariaf.my.id/praktikum_uiux/01_praktikum_cv)
+- [sc_tugas_praktikumm_1](./01_praktikum_cv/) [branch](https://github.com/ariafatah0711/praktikum_uiux/tree/praktikum_01) - [preview](https://ariaf.my.id/praktikum_uiux/01_praktikum_cv)
 
 ## latihan di kelas
 - [sc_lat_praktikum_01](./latihan/01/) - [preview](https://ariaf.my.id/praktikum_uiux/latihan/01)
@@ -10,7 +10,10 @@ Nama: Aria Fatah Anom
 
 ---
 
-### add your folder to another branch
+## Catetan
+<details>
+  <summary><b>Membuat Branch Baru dari Folder Tertentu</b></summary>
+
 ```bash
 # clone repo bersih
 git clone https://github.com/ariafatah0711/praktikum_uiux.git tugas_clean
@@ -35,10 +38,15 @@ git push -u origin praktikum_01 --force
 cd ..
 Remove-Item -Recurse -Force .\tugas_clean
 ```
+</details>
 
-delete;
+<details>
+  <summary><b>Menghapus Branh</b></summary>
+
 ```bash
 git checkout main
 git branch -D praktikum_01
 git push origin --delete praktikum_01
 ```
+
+</details>
