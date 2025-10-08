@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Pembelian</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <hr>
+    <h1 align="center">Thank You!</h1>
+    <p align="center">Pesananmu sudah kami terima 🍕</p>
+    <hr>
+
+    <!-- Tempat menampilkan hasil -->
+    <div id="output"></div>
+
+    <a href="index.html">back</a>
+
+    <script>
+        // Ambil parameter dari URL
+        const params = new URLSearchParams(window.location.search);
+
+        // Buat konten hasil
+        let result = "<h2>Detail Pesanan:</h2><ul>";
+        for (const [key, value] of params.entries()) {
+            result += `<li><strong>${key}</strong>: ${value}</li>`;
+        }
+        result += "</ul>";
+
+        // Masukkan ke dalam div, bukan pakai document.write
+        document.getElementById("output").innerHTML = result;
+    </script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasil Pembelian</title>
+</head>
+<body>
+    <hr>
+    <h1 align="center">Thank You</h1>
+    <hr>
+</body>
+</html> -->

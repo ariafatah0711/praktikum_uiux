@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pizza</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <h1>Toko Pizza Aria</h1>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi minima quis eos quisquam, aliquam obcaecati veritatis impedit esse dignissimos amet quos culpa excepturi vel provident error vitae nam magnam dolores.</p>
+
+    <!-- <form action="" method="POST"> -->
+    <!-- <form action=""> -->
+    <form action="order.html">
+        <table border="0">
+            <thead>
+                <tr>
+                    <th colspan="2">Your Information: </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><label for="name">Name: </label></td>
+                    <td><input id="name" name="name" placeholder="Name" type="text" required></input></td>
+                </tr>
+                <tr>
+                    <td><label for="address">Address: </label></td>
+                    <td><input id="address" name="address" placeholder="Address" type="text" required></input></td>
+                </tr>
+                <tr>
+                    <td><label for="telp">Telp: </label></td>
+                    <td><input id="telp" name="telp" placeholder="Telp" type="tel" pattern="[0-9]{10,13}" title="Masukkan nomor telepon 10–13 digit"  required></input></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email: </label></td>
+                    <td><input id="email" name="email" placeholder="Email" type="email" required></input></td>
+                </tr>
+                <tr>
+                    <td><label for="delivery-instruction">delivery-instruction: </label></td>
+                    <td><textarea name="delivery-instruction" id="delivery-instruction"></textarea></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <fieldset>
+            <legend>Deign Your Dream Pizza: </legend>
+            <h4>Pizza Specs</h4>
+            <h4>Crust (Chose One)</h4>
+            <ul>
+                <li>
+                    <input type="radio" name="crust" id="crust-cw" value="cw">
+                    <label for="crust-cw">Classic White</label>
+                </li>
+                <li>
+                    <input type="radio" name="crust" id="crust-mg" value="mg">
+                    <label for="crust-mg">Multigrain</label>
+                </li>
+                <li>
+                    <input type="radio" name="crust" id="crust-cheese" value="cc">
+                    <label for="crust-cheese">Cheese-Stuffed crust</label>
+                </li>
+                <li>
+                    <input type="radio" name="crust" id="crust-gluten" value="gf">
+                    <label for="crust-gluten">Glutten-Free</label>
+                </li>
+            </ul>
+
+            <h4>Topping (Chose Many Your Want))</h4>
+            <ul>
+                <li>
+                    <input type="checkbox" name="topping" id="topping-red" value="red-sauce">
+                    <label for="topping-red">Red Sauce</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="topping" id="topping-white" value="white-sauce">
+                    <label for="topping-white">White Sauce</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="topping" id="topping-mozzarella" value="mozzarella">
+                    <label for="topping-mozzarella">Mozzarella Cheese</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="topping" id="topping-pepperoni" value="pepperoni">
+                    <label for="topping-pepperoni">Pepperoni</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="topping" id="topping-mushrooms" value="mushrooms">
+                    <label for="topping-mushrooms">Mushrooms</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="topping" id="topping-peppers" value="peppers">
+                    <label for="topping-peppers">Peppers</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="topping" id="topping-anchovies" value="anchovies">
+                    <label for="topping-anchovies">Anchovies</label>
+                </li>
+            </ul>
+
+            <h4>Number: </h4>
+            <label for="count-pizza">How Many Pizza</label>
+            <input type="number" name="count-pizza" id="count-pizza" value="1">
+        </fieldset>
+
+        <div class="form_footer">
+            <button type="submit">Bring Me A Pizza</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form>
+</body>
+</html>

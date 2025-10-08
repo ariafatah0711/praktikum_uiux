@@ -1,0 +1,245 @@
+/* RESET & ROOT */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* BODY */
+body {
+    background: #fffaf2;
+    color: #333;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* HEADER */
+h1 {
+    font-size: 2.5rem;
+    color: #d35400;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+p {
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* FORM */
+form {
+    width: 100%;
+    max-width: 700px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+thead {
+    background: #f39c12;
+    color: #fff;
+}
+
+thead th {
+    padding: 12px;
+    text-align: left;
+    font-size: 1rem;
+}
+
+tbody tr:nth-child(even) {
+    background: #fdf2e9;
+}
+
+tbody td {
+    padding: 12px;
+    vertical-align: top;
+}
+
+/* LABEL */
+label {
+    font-weight: bold;
+}
+
+/* INPUTS & TEXTAREA */
+input,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #e67e22;
+    box-shadow: 0 0 4px rgba(230, 126, 34, 0.4);
+}
+
+/* TEXTAREA */
+textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+/* FIELDSET */
+fieldset {
+    border: 2px solid #f39c12;
+    border-radius: 10px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    background: #fff8ee;
+}
+
+legend {
+    font-weight: bold;
+    color: #d35400;
+    padding: 0 8px;
+}
+
+fieldset h4 {
+    margin: 10px 0 6px;
+    color: #444;
+}
+
+/* UL & LI */
+ul {
+    list-style: none;
+    margin-top: 5px;
+    padding-left: 10px;
+}
+
+li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    cursor: pointer;
+}
+
+/* FORM FOOTER */
+.form_footer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.form_footer button {
+    background: #e67e22;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background 0.3s, transform 0.1s;
+}
+
+.form_footer button:hover {
+    background: #d35400;
+    transform: translateY(-2px);
+}
+
+.form_footer button:active {
+    transform: translateY(0);
+}
+
+
+
+/* ==== ORDER PAGE STYLING ==== */
+/* Container hasil pesanan */
+#output {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 25px 30px;
+    max-width: 700px;
+    width: 100%;
+    margin-top: 30px;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Judul hasil */
+#output h2 {
+    color: #d35400;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Daftar hasil */
+#output ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#output li {
+    background: #fff8ee;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-left: 5px solid #f39c12;
+    border-radius: 8px;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#output li strong {
+    color: #d35400;
+}
+
+/* Tombol back */
+a[href="index.html"] {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 10px 18px;
+    background: #e67e22;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.1s;
+}
+
+a[href="index.html"]:hover {
+    background: #d35400;
+    transform: translateY(-2px);
+}
+
+a[href="index.html"]:active {
+    transform: translateY(0);
+}
+
+/* Animasi muncul lembut */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
