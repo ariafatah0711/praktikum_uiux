@@ -2,7 +2,7 @@
 Nama: Aria Fatah Anom
 
 ## tugas praktikum
-- [sc_tugas_praktikumm_1](./01_praktikum_cv/) [branch](https://github.com/ariafatah0711/praktikum_uiux/tree/praktikum_01) - [preview](https://ariaf.my.id/praktikum_uiux/01_praktikum_cv)
+- [sc_tugas_praktikumm_1](./01_praktikum_cv/) - [branch](https://github.com/ariafatah0711/praktikum_uiux/tree/praktikum_01) - [preview](https://ariaf.my.id/praktikum_uiux/01_praktikum_cv)
 
 ## latihan di kelas
 - [sc_lat_praktikum_01](./latihan/01/) - [preview](https://ariaf.my.id/praktikum_uiux/latihan/01)
