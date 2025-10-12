@@ -18,32 +18,38 @@
     <a href="index.html">back</a>
 
     <script>
-        // Ambil parameter dari URL
-        const params = new URLSearchParams(window.location.search);
+        // script untuk mengampil value parameter, dan menampilkan output dari data
+        (function(){
+            const p = new URLSearchParams(location.search);
+            console.log(p)
 
-        // Buat konten hasil
-        let result = "<h2>Detail Pesanan:</h2><ul>";
-        for (const [key, value] of params.entries()) {
-            result += `<li><strong>${key}</strong>: ${value}</li>`;
-        }
-        result += "</ul>";
+            const map = {cw:'Classic White',mg:'Multigrain',cc:'Cheese-Stuffed',gf:'Gluten-Free'};
+            const out = document.getElementById('output');
+            const rows = [];
+            const add = (k,v)=> rows.push([k,v]);
 
-        // Masukkan ke dalam div, bukan pakai document.write
-        document.getElementById("output").innerHTML = result;
+            if(p.get('name')) add('Name', p.get('name'));
+            if(p.get('address')) add('Address', p.get('address'));
+            if(p.get('telp')) add('Telp', p.get('telp'));
+            if(p.get('email')) add('Email', p.get('email'));
+            if(p.get('delivery-instruction')) add('Delivery Instruction', p.get('delivery-instruction'));
+
+            const t = p.getAll('topping'); if(t.length) add('Toppings', t.join(', '));
+            const c = p.get('crust'); if(c) add('Crust', map[c]||c);
+            add('Quantity', p.get('count-pizza')||p.get('count')||'1');
+
+            if(!rows.length){ out.textContent = 'No order data found.'; return; }
+
+            const table = document.createElement('table');
+            table.style.borderCollapse='collapse';
+            rows.forEach(([k,v])=>{
+                const tr=document.createElement('tr');
+                const td1=document.createElement('td'); td1.textContent=k; td1.style.fontWeight='600'; td1.style.padding='6px 8px'; td1.style.border='1px solid #ddd';
+                const td2=document.createElement('td'); td2.textContent=v; td2.style.padding='6px 8px'; td2.style.border='1px solid #ddd';
+                tr.appendChild(td1); tr.appendChild(td2); table.appendChild(tr);
+            });
+            out.appendChild(table);
+        })();
     </script>
 </body>
 </html>
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hasil Pembelian</title>
-</head>
-<body>
-    <hr>
-    <h1 align="center">Thank You</h1>
-    <hr>
-</body>
-</html> -->
