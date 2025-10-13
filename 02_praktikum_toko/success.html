@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PerkakasSiber</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="shortcut icon" href="./assets/images/1.png" type="image/png">
+  <meta charset="UTF-8">
+  <title>Checkout Success</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="shortcut icon" href="./assets/images/1.png" type="image/png">
 </head>
 <body>
     <header>
@@ -17,39 +16,17 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <div class="container">
-            <h1 class="title">Shop</h1>
-            <div id="products" class="products-grid">
-                <!-- Data Static -->
-                <!-- <div class="product-card">
-                    <img src="./assets/images/1.png" alt="ESP8266 Deauthe">
-                    <h3>ESP8266 Deauther</h3>
-                    <p>Modul berbasis ESP8266 untuk simulasi deauthentication pada jaringan WiFi dalam lingkungan lab dan pengujian keamanan (hanya untuk tujuan etis).</p>
-                    <div class="actions">
-                        <div class="price">RP. 75000</div>
-                        <div>
-                        <button class="add" data-id="${p.id}">Tambah</button>
-                        <button class="del" data-id="${p.id}">Hapus</button>
-                        </div>
-                    </div>
-                </div> -->
 
-                <!-- Products Dymamis by rendered here by assets/js/app.js -->
-            </div>
-        </div>
-        <aside>
-            <h1 class="title">Cart</h1>
-            <div id="cart">
-                <p class="cart-empty">Keranjang kosong</p>
-                <ul id="cart-items"></ul>
-                <div id="cart-summary" style="display:none;">
-                    <p>Total: <span id="cart-total">0</span></p>
-                    <button id="checkout-btn">Checkout</button>
-                </div>
-            </div>
-        </aside>
+    <main class="success">
+    <div class="success-box">
+        <h2>✅ Terima kasih sudah belanja!</h2>
+        <p>Berikut ringkasan belanja kamu:</p>
+        <ul id="checkout-items"></ul>
+        <p><strong>Total:</strong> Rp <span id="checkout-total"></span></p>
+        <a href="index.html">⬅ Kembali ke toko</a>
+    </div>
     </main>
+
     <footer>
         <div class="footer-content">
             <div class="footer-about">
@@ -81,6 +58,24 @@
             <p>&copy; 2025 PerkakasSiber. Semua hak dilindungi.</p>
         </div>
     </footer>
-    <script src="./assets/js/app.js"></script>
+
+    <script>
+    const data = JSON.parse(localStorage.getItem("checkout")) || {items:[], total:0};
+    const itemsEl = document.getElementById("checkout-items");
+    const totalEl = document.getElementById("checkout-total");
+
+    itemsEl.innerHTML = data.items
+        .map(i => `
+            <li>
+                <span class="item-name">${i.name} x ${i.qty}</span>
+                <span class="item-price">Rp ${i.subtotal.toLocaleString("id-ID")}</span>
+            </li>
+        `)
+        .join("");
+    totalEl.textContent = data.total.toLocaleString("id-ID");
+
+    // Hapus cart setelah checkout
+    // localStorage.removeItem("checkout");
+    </script>
 </body>
 </html>

@@ -2,7 +2,8 @@ const URL = "./data/dummy.json";
 let products = [],
   cart = {};
 
-const fmt = (v) => "Rp " + v.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+// helper format rupiah
+const fmt = (v) => "Rp " + v.toLocaleString("id-ID");
 
 async function load() {
   try {
@@ -14,18 +15,19 @@ async function load() {
 }
 
 function render() {
-  const el = document.getElementById("products");
-  el.innerHTML = products
+  document.getElementById("products").innerHTML = products
     .map(
       (p) => `
     <div class="product-card">
       <img src="${p.image}" alt="${p.name}">
       <h3>${p.name}</h3>
       <p>${p.desc}</p>
-      <div class="price">${fmt(p.price)}</div>
       <div class="actions">
-        <button class="add" data-id="${p.id}">Tambah</button>
-        <button class="del" data-id="${p.id}">Hapus</button>
+        <div class="price">${fmt(p.price)}</div>
+        <div>
+          <button class="add" data-id="${p.id}">Tambah</button>
+          <button class="del" data-id="${p.id}">Hapus</button>
+        </div>
       </div>
     </div>
   `
@@ -34,19 +36,25 @@ function render() {
 }
 
 function update() {
-  const items = document.getElementById("cart-items");
-  const empty = document.querySelector(".cart-empty");
+  const itemsEl = document.getElementById("cart-items");
+  const emptyEl = document.querySelector(".cart-empty");
   const totalEl = document.getElementById("cart-total");
+  const summaryEl = document.getElementById("cart-summary");
   const ids = Object.keys(cart);
+
   if (!ids.length) {
-    empty.style.display = "block";
-    totalEl.textContent = "Rp 0";
-    items.innerHTML = "";
+    emptyEl.style.display = "block";
+    summaryEl.style.display = "none";
+    totalEl.textContent = fmt(0);
+    itemsEl.innerHTML = "";
     return;
   }
-  empty.style.display = "none";
+
+  emptyEl.style.display = "none";
+  summaryEl.style.display = "block";
+
   let total = 0;
-  items.innerHTML = ids
+  itemsEl.innerHTML = ids
     .map((id) => {
       const p = products.find((x) => x.id == id);
       const subtotal = p.price * cart[id];
@@ -54,12 +62,14 @@ function update() {
       return `<li>${p.name} x ${cart[id]} - ${fmt(subtotal)}</li>`;
     })
     .join("");
+
   totalEl.textContent = fmt(total);
 }
 
 document.addEventListener("click", (e) => {
   const id = e.target.dataset.id;
   if (!id) return;
+
   if (e.target.classList.contains("add")) cart[id] = (cart[id] || 0) + 1;
   if (e.target.classList.contains("del") && cart[id]) {
     if (--cart[id] <= 0) delete cart[id];
@@ -67,9 +77,28 @@ document.addEventListener("click", (e) => {
   update();
 });
 
+document.getElementById("checkout-btn").addEventListener("click", () => {
+  if (!Object.keys(cart).length) return alert("Keranjang masih kosong!");
+
+  const checkoutData = {
+    items: Object.keys(cart).map((id) => {
+      const p = products.find((x) => x.id == id);
+      return { name: p.name, qty: cart[id], price: p.price, subtotal: p.price * cart[id] };
+    }),
+    total: Object.keys(cart).reduce((sum, id) => {
+      const p = products.find((x) => x.id == id);
+      return sum + p.price * cart[id];
+    }, 0),
+  };
+
+  localStorage.setItem("checkout", JSON.stringify(checkoutData));
+  window.location.href = "success.html";
+});
+
 async function start() {
   await load();
   render();
   update();
 }
+
 document.readyState === "loading" ? document.addEventListener("DOMContentLoaded", start) : start();
