@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PerkakasSiber</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="./assets/images/1.png" type="image/png">
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">PerkakasSiber</a></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html"><img height="30" src="./assets/icons/shop.svg" alt="shop"></a></li>
+                <li><a href="success.html"><img height="30" src="./assets/icons/cart.svg" alt="cart"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1 class="title">Shop</h1>
+            <div id="products" class="products-grid">
+                <!-- Data Static -->
+                <!-- <div class="product-card">
+                    <img src="./assets/images/1.png" alt="ESP8266 Deauthe">
+                    <h3>ESP8266 Deauther</h3>
+                    <p>Modul berbasis ESP8266 untuk simulasi deauthentication pada jaringan WiFi dalam lingkungan lab dan pengujian keamanan (hanya untuk tujuan etis).</p>
+                    <div class="actions">
+                        <div class="price">RP. 75000</div>
+                        <div>
+                        <button class="add" data-id="${p.id}">Tambah</button>
+                        <button class="del" data-id="${p.id}">Hapus</button>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Products Dymamis by rendered here by assets/js/app.js -->
+            </div>
+        </div>
+        <aside>
+            <h1 class="title">Cart</h1>
+            <div id="cart">
+                <p class="cart-empty">Keranjang kosong</p>
+                <ul id="cart-items"></ul>
+                <div id="cart-summary" style="display:none;">
+                    <p>Total: <span id="cart-total">0</span></p>
+                    <button id="checkout-btn">Checkout</button>
+                </div>
+            </div>
+        </aside>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <h3>PerkakasSiber</h3>
+                <p>Toko online penyedia alat dan perangkat keamanan siber. Semua yang kamu butuhkan untuk eksplorasi dan pembelajaran etikal hacking.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Tautan</h4>
+                <ul>
+                    <li><a href="#">Beranda</a></li>
+                    <li><a href="#">Tentang</a></li>
+                    <li><a href="#">Kontak</a></li>
+                    <li><a href="#">Privasi</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h4>Ikuti Kami</h4>
+                <div class="social-icons" style="align-items: center;">
+                    <a href="https://ariaf.my.id"><img src="./assets/icons/github.svg" alt="GitHub" height="35"></a>
+                    <a href="https://ariaf.my.id"><img src="./assets/icons/web.svg" alt="Web" height="45"></a>
+                    <a href="https://ariaf.my.id"><img src="./assets/icons/instagram.svg" alt="Instagram" height="50"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 PerkakasSiber. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>

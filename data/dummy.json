@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "ESP8266 Deauther",
+    "desc": "Modul berbasis ESP8266 untuk simulasi deauthentication pada jaringan WiFi dalam lingkungan lab dan pengujian keamanan (hanya untuk tujuan etis).",
+    "price": 75000,
+    "image": "./assets/images/1.png"
+  },
+  {
+    "id": 2,
+    "name": "USB Rubber Ducky Clone",
+    "desc": "Perangkat USB yang menyimulasikan input keyboard otomatis untuk pengujian skrip dan hardening sistem—digunakan pada perangkat milik sendiri atau dengan izin.",
+    "price": 185000,
+    "image": "./assets/images/2.png"
+  },
+  {
+    "id": 3,
+    "name": "WiFi Pineapple Mini (Clone)",
+    "desc": "Perangkat untuk audit dan analisis jaringan nirkabel, cocok untuk pelatihan pentest dan riset keamanan dalam lingkungan terkontrol.",
+    "price": 950000,
+    "image": "./assets/images/3.png"
+  },
+  {
+    "id": 4,
+    "name": "Proxmark3 Easy",
+    "desc": "Alat riset RFID/NFC untuk analisis protokol kartu akses dan debugging sistem autentikasi (untuk riset dan mitigasi kelemahan).",
+    "price": 650000,
+    "image": "./assets/images/4.png"
+  },
+  {
+    "id": 5,
+    "name": "Hardware Keylogger",
+    "desc": "Perangkat demo untuk menunjukkan risiko keamanan fisik terhadap input keyboard; hanya untuk edukasi dan pengujian dengan izin eksplisit.",
+    "price": 135000,
+    "image": "./assets/images/5.png"
+  },
+  {
+    "id": 6,
+    "name": "Jammer Bluetooth JM012",
+    "desc": "Perangkat pengganggu sinyal WiFi & Bluetooth (JM012). Item ini termasuk barang terbatas dan mungkin dilarang/diatur di banyak wilayah — hanya tampilkan sebagai data demo atau untuk riset yang mematuhi hukum setempat.",
+    "price": 210000,
+    "image": "./assets/images/6.png"
+  }
+]

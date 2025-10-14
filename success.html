@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout Success</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="shortcut icon" href="./assets/images/1.png" type="image/png">
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">PerkakasSiber</a></h1>
+        <nav>
+            <ul>
+                <li><a href="index.html"><img height="30" src="./assets/icons/shop.svg" alt="shop"></a></li>
+                <li><a href="success.html"><img height="30" src="./assets/icons/cart.svg" alt="cart"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="success">
+    <div class="success-box">
+        <h2>✅ Terima kasih sudah belanja!</h2>
+        <p>Berikut ringkasan belanja kamu:</p>
+        <ul id="checkout-items"></ul>
+        <p><strong>Total:</strong> Rp <span id="checkout-total"></span></p>
+        <a href="index.html">⬅ Kembali ke toko</a>
+    </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <h3>PerkakasSiber</h3>
+                <p>Toko online penyedia alat dan perangkat keamanan siber. Semua yang kamu butuhkan untuk eksplorasi dan pembelajaran etikal hacking.</p>
+            </div>
+
+            <div class="footer-links">
+                <h4>Tautan</h4>
+                <ul>
+                    <li><a href="#">Beranda</a></li>
+                    <li><a href="#">Tentang</a></li>
+                    <li><a href="#">Kontak</a></li>
+                    <li><a href="#">Privasi</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-social">
+                <h4>Ikuti Kami</h4>
+                <div class="social-icons" style="align-items: center;">
+                    <a href="https://ariaf.my.id"><img src="./assets/icons/github.svg" alt="GitHub" height="35"></a>
+                    <a href="https://ariaf.my.id"><img src="./assets/icons/web.svg" alt="Web" height="45"></a>
+                    <a href="https://ariaf.my.id"><img src="./assets/icons/instagram.svg" alt="Instagram" height="50"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 PerkakasSiber. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+
+    <script>
+    const data = JSON.parse(localStorage.getItem("checkout")) || {items:[], total:0};
+    const itemsEl = document.getElementById("checkout-items");
+    const totalEl = document.getElementById("checkout-total");
+
+    itemsEl.innerHTML = data.items
+        .map(i => `
+            <li>
+                <span class="item-name">${i.name} x ${i.qty}</span>
+                <span class="item-price">Rp ${i.subtotal.toLocaleString("id-ID")}</span>
+            </li>
+        `)
+        .join("");
+    totalEl.textContent = data.total.toLocaleString("id-ID");
+
+    // Hapus cart setelah checkout
+    // localStorage.removeItem("checkout");
+    </script>
+</body>
+</html>
