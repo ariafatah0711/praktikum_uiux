@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Payment Link Berhasil Dibuat - PayLinker</title>
+  <link rel="stylesheet" href="./assets/css/success.css">
+</head>
+<body>
+  <header>
+    <h1><a href="#">PayLinker</a></h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Generate Link</a></li>
+        <li><a href="#">Transaction History</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="success-container">
+      <div class="success-icon">✅</div>
+      <h2>Payment Link Berhasil Dibuat!</h2>
+      <p>Bagikan link ini ke pembeli untuk menyelesaikan pembayaran.</p>
+
+      <div class="product-preview">
+        <img id="productImage" src="./assets/img/sample-product.jpg" alt="Produk">
+        <strong id="productTitle">Nama Produk</strong>
+      </div>
+
+      <div class="details">
+        <p><strong>Jumlah:</strong> <span id="productQty">1</span></p>
+        <p><strong>Deskripsi:</strong> <span id="productDesc">-</span></p>
+        <p><strong>Bank Tujuan:</strong> <span id="productBank">-</span></p>
+        <p><strong>Nomor Rekening:</strong> <span id="productAccount">-</span></p>
+        <p><strong>Nama Pemilik:</strong> <span id="productHolder">-</span></p>
+      </div>
+
+      <div class="link-box" id="paymentLink"></div>
+
+      <div class="btn-group">
+        <button class="btn copy" onclick="copyLink()">Copy Link</button>
+        <a id="whatsappBtn" href="#" target="_blank" class="btn whatsapp">Kirim via WhatsApp</a>
+        <a href="index.html" class="btn">Buat Link Baru</a>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 PayLinker. Semua hak dilindungi.
+  </footer>
+
+  <script>
+    // Ambil data dari localStorage
+    const data = JSON.parse(localStorage.getItem("paymentData"));
+    if (data) {
+      document.getElementById("productTitle").textContent = data.title || "Produk Tanpa Nama";
+      document.getElementById("paymentLink").textContent = data.payment_link;
+      document.getElementById("productQty").textContent = data.transaction || "1";
+      document.getElementById("productDesc").textContent = data.description || "-";
+      document.getElementById("productBank").textContent = data.bank || "-";
+      document.getElementById("productAccount").textContent = data.account_number || "-";
+      document.getElementById("productHolder").textContent = data.account_holder || "-";
+
+      if (data.image) document.getElementById("productImage").src = data.image;
+
+      document.getElementById("whatsappBtn").href =
+        `https://wa.me/?text=Halo!%20Berikut%20link%20pembayaran%20Anda:%20${encodeURIComponent(data.payment_link)}`;
+    } else {
+      // Kalau data kosong, redirect balik ke generate
+      window.location.href = "index.html";
+    }
+
+    function copyLink() {
+      const linkText = document.getElementById("paymentLink").innerText;
+      navigator.clipboard.writeText(linkText)
+        .then(() => alert("Link berhasil disalin!"))
+        .catch(() => alert("Gagal menyalin link."));
+    }
+  </script>
+</body>
+</html>

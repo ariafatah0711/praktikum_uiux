@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PayLinker - Generate Payment Link</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <header>
+    <h1><a href="#">PayLinker</a></h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Generate Link</a></li>
+        <li><a href="#">Transaction History</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Form Generate Link Pembayaran</h2>
+
+    <div class="form-container">
+      <div class="image-upload">
+        <label for="file-upload" class="image-preview" id="imagePreview">
+          Klik untuk upload gambar produk
+        </label>
+        <input type="file" id="file-upload" accept="image/*" />
+      </div>
+
+      <form id="paymentForm">
+        <div class="row">
+          <div class="form-group">
+            <label>Nama Barang / Produk:</label>
+            <input type="text" name="title" placeholder="Contoh: MacBook Air - Rp 12.000.000" required>
+          </div>
+          <div class="form-group small">
+            <label>Jumlah Transaksi:</label>
+            <input type="number" name="transaction" min="1" value="1">
+          </div>
+        </div>
+
+        <label>Deskripsi Produk:</label>
+        <textarea name="description" rows="4" placeholder="Tahun: 2022&#10;Model: M2&#10;Kondisi: Baru&#10;Garansi: Resmi"></textarea>
+
+        <div class="row">
+          <div class="form-group">
+            <label>Bank Tujuan:</label>
+            <select name="bank">
+              <option value="BCA">BCA</option>
+              <option value="Mandiri">Mandiri</option>
+              <option value="BNI">BNI</option>
+              <option value="BRI">BRI</option>
+              <option value="HSBC">HSBC</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Nomor Rekening:</label>
+            <input type="text" name="account_number" placeholder="123-456-789-0" required>
+          </div>
+          <div class="form-group">
+            <label>Nama Pemilik Rekening:</label>
+            <input type="text" name="account_holder" placeholder="Nama Lengkap" required>
+          </div>
+        </div>
+
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="send_mobile" checked> Kirim ke Nomor HP</label>
+          <input type="text" name="mobile_numbers" placeholder="08123456789, 08129876543">
+
+          <label><input type="checkbox" name="send_email" checked> Kirim ke Email</label>
+          <input type="email" name="emails" placeholder="pembeli@mail.com, lainnya@mail.com">
+        </div>
+
+        <button type="submit">Generate Payment Link</button>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 PayLinker. Semua hak dilindungi.
+  </footer>
+
+  <script>
+    const fileUpload = document.getElementById('file-upload');
+    const imagePreview = document.getElementById('imagePreview');
+    let uploadedImage = "";
+
+    // Preview gambar
+    fileUpload.addEventListener('change', function() {
+      const file = this.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          uploadedImage = e.target.result; // simpan base64-nya
+          imagePreview.style.backgroundImage = `url('${uploadedImage}')`;
+          imagePreview.textContent = "";
+        };
+        reader.readAsDataURL(file);
+      } else {
+        uploadedImage = "";
+        imagePreview.style.backgroundImage = "none";
+        imagePreview.textContent = "Klik untuk upload gambar produk";
+      }
+    });
+
+    imagePreview.addEventListener('click', () => fileUpload.click());
+
+    // Simpan ke localStorage dan redirect
+    const form = document.getElementById('paymentForm');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+      const paymentData = Object.fromEntries(formData.entries());
+
+      // Tambah field gambar & link unik
+      paymentData.image = uploadedImage;
+      paymentData.payment_link = "https://paylinker.id/pay/" + Math.random().toString(36).substring(2, 10).toUpperCase();
+
+      // Simpan ke localStorage
+      localStorage.setItem("paymentData", JSON.stringify(paymentData));
+
+      // Redirect ke success.html
+      window.location.href = "success.html";
+    });
+  </script>
+</body>
+</html>
