@@ -1,9 +1,11 @@
 # praktikum ui ux
-Nama: Aria Fatah Anom
+Nama  : Aria Fatah Anom
+Rombel: TI07
 
 ## tugas praktikum
 - [sc_tugas_praktikum_1](https://github.com/ariafatah0711/praktikum_uiux/tree/praktikum_01) <!-- - [branch](https://github.com/ariafatah0711/praktikum_uiux/tree/praktikum_01) --> - [preview](https://ariaf.my.id/praktikum_uiux/01_praktikum_cv)
-- [sc_tugas_praktikum_1](https://github.com/ariafatah0711/praktikum_uiux/tree/praktikum_02) <!-- - [branch](https://github.com/ariafatah0711/praktikum_uiux/tree/praktikum_02) --> - [preview](https://ariaf.my.id/praktikum_uiux/02_praktikum_toko)
+- [sc_tugas_praktikum_2_cart](https://github.com/ariafatah0711/praktikum_uiux/tree/praktikum_02_cart) <!-- - [branch](https://github.com/ariafatah0711/praktikum_uiux/tree/praktikum_02) --> - [preview](https://ariaf.my.id/praktikum_uiux/02_praktikum_cart)
+- [sc_tugas_praktikum_2_form](https://github.com/ariafatah0711/praktikum_uiux/tree/praktikum_02_form) <!-- - [branch](https://github.com/ariafatah0711/praktikum_uiux/tree/praktikum_02) --> - [preview](https://ariaf.my.id/praktikum_uiux/02_praktikum_form)
 
 ## latihan di kelas
 - [sc_lat_praktikum_01](https://github.com/ariafatah0711/praktikum_uiux/tree/main/latihan/01) - [preview](https://ariaf.my.id/praktikum_uiux/latihan/01)
