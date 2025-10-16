@@ -1,15 +1,19 @@
 # praktikum ui ux
-Nama  : Aria Fatah Anom
+Nama  : Aria Fatah Anom \
 Rombel: TI07
 
 ## tugas praktikum
-- [sc_tugas_praktikum_1](https://github.com/ariafatah0711/praktikum_uiux/tree/praktikum_01) <!-- - [branch](https://github.com/ariafatah0711/praktikum_uiux/tree/praktikum_01) --> - [preview](https://ariaf.my.id/praktikum_uiux/01_praktikum_cv)
-- [sc_tugas_praktikum_2_cart](https://github.com/ariafatah0711/praktikum_uiux/tree/praktikum_02_cart) <!-- - [branch](https://github.com/ariafatah0711/praktikum_uiux/tree/praktikum_02) --> - [preview](https://ariaf.my.id/praktikum_uiux/02_praktikum_cart)
-- [sc_tugas_praktikum_2_form](https://github.com/ariafatah0711/praktikum_uiux/tree/praktikum_02_form) <!-- - [branch](https://github.com/ariafatah0711/praktikum_uiux/tree/praktikum_02) --> - [preview](https://ariaf.my.id/praktikum_uiux/02_praktikum_form)
+- [sc_tugas_praktikum_1](https://github.com/ariafatah0711/praktikum_uiux/tree/praktikum_01) - [preview](https://ariaf.my.id/praktikum_uiux/01_praktikum_cv)
+- [sc_tugas_praktikum_2_cart](https://github.com/ariafatah0711/praktikum_uiux/tree/praktikum_02_cart) - [preview](https://ariaf.my.id/praktikum_uiux/02_praktikum_cart)
+- [sc_tugas_praktikum_2_form](https://github.com/ariafatah0711/praktikum_uiux/tree/praktikum_02_form) - [preview](https://ariaf.my.id/praktikum_uiux/02_praktikum_form)
+- [sc_tugas_praktikum_3_](https://github.com/ariafatah0711/praktikum_uiux/tree/praktikum_03_) - [preview](https://ariaf.my.id/praktikum_uiux/03_praktikum_)
 
 ## latihan di kelas
 - [sc_lat_praktikum_01](https://github.com/ariafatah0711/praktikum_uiux/tree/main/latihan/01) - [preview](https://ariaf.my.id/praktikum_uiux/latihan/01)
-- [sc_lat_praktikum_02](https://github.com/ariafatah0711/praktikum_uiux/tree/main/latihan/01) - [preview](https://ariaf.my.id/praktikum_uiux/latihan/02)
+- [sc_lat_praktikum_02](https://github.com/ariafatah0711/praktikum_uiux/tree/main/latihan/02) - [preview](https://ariaf.my.id/praktikum_uiux/latihan/02)
+- [sc_lat_praktikum_03](https://github.com/ariafatah0711/praktikum_uiux/tree/main/latihan/03)
+  - [preview layout](https://ariaf.my.id/praktikum_uiux/latihan/03/)
+  - [preview frame](https://ariaf.my.id/praktikum_uiux/latihan/03/home.html)
 
 ---
 

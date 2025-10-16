@@ -1,11 +1,130 @@
 <!DOCTYPE html>
-<html>
-    <frameset rows="12%,*,5%" noresize>
-        <frame src="component/header.html">
-            <frameset cols="15%,*">
-                <frame src="component/menu.html">
-                <frame src="../02/index.html" name="showframe">
-            </frameset>
-        <frame src="component/footer.html">
-    </frameset>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout HTML5</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+
+            /* Debug */
+            /* border: 0.1em solid red; */
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+            background: #f5f5f5;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+        }
+
+        header, nav, article, aside, footer {
+            padding: 10px;
+            border: 1px solid #000;
+        }
+
+        header {
+            background: #ffeb3b;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        nav {
+            background: #8bc34a;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            flex: 1;
+            background: white;
+        }
+
+        article {
+            background: #ffe082;
+            flex: 3;
+            padding: 15px;
+        }
+
+        article section {
+            background: #fff8e1;
+            border: 1px solid #ccc;
+            margin: 8px 0;
+            padding: 10px;
+        }
+
+        aside {
+            background: #4dd0e1;
+            flex: 1;
+            padding: 15px;
+        }
+
+        footer {
+            background: #ffeb3b;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        /* Responsif */
+        @media (max-width: 768px) {
+            main {
+                flex-direction: column;
+            }
+
+            aside {
+                order: 2;
+            }
+
+            article {
+                order: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Aria Fatah
+    </header>
+
+    <nav>
+        <ul style="display: flex; width: 100%; justify-content: center; list-style: none; gap: 1em;">
+            <li><a href="https://ariaf.my.id">My Web</a></li>
+            <li><a href="https://notes.ariaf.my.id">Notes</a></li>
+            <li><a href="https://files.ariaf.my.id">Files</a></li>
+            <li><a href="https://ctf.ariaf.my.id">Platform CTF</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article>
+            <h2>Artikel</h2>
+            <!-- <section><a href="https://medium.com/@ariafatah07/day-1-roadmap-cyber-security-untuk-anak-smk-jurusan-tkj-by-ariaf-f539961626ba">Day 1 — RoadMap Cyber Security Untuk Anak SMK Jurusan TKJ by ariaf</a></section>
+            <section><a href="https://medium.com/@ariafatah07/day-2-simulasi-nat-cisco-internet-untuk-client-akses-server-via-router-by-ariaf-8c242b9cc1a5">Day 2 — Simulasi NAT Cisco: Internet untuk Client & Akses Server via Router by ariaf</a></section>
+            <section><a href="https://medium.com/@ariafatah07/day-3-malware-analysis-menggunakan-wireshark-4e88b2ab6900">Day 3 — Malware Analysis Menggunakan Wireshark</a></section> -->
+            <section><a href="./home.html">Latihan Frame</a></section>
+            <section><a href="./iframe.html">Latihan IFrame</a></section>
+        </article>
+
+        <aside>
+            <div style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
+                <h3>Aria Fatah</h3>
+                <img style="border-radius: 50%;" src="https://ariaf.my.id/assets/images/profile2-128.avif" alt="logo">
+                <p>IT Enthusiast Fokus di Cyber Security & Networking</p>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        Made with ♥ on Earth By <a href="https://github.com/ariafatah0711">Aria Fatah</a>
+    </footer>
+</body>
 </html>
