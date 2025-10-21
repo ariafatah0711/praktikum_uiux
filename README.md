@@ -6,7 +6,7 @@ repo  : https://github.com/ariafatah0711/praktikum_uiux \
 branch: praktikum_01
 
 url   : https://github.com/ariafatah0711/praktikum_uiux/tree/praktikum_01 \
-demo  : https://ariaf.my.id/praktikum_uiux/01_praktikum
+demo  : https://ariaf.my.id/praktikum_uiux/01_praktikum_cv
 
 ### use
 ```bash
