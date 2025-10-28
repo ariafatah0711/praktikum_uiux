@@ -13,8 +13,8 @@ Rombel: TI07
 - [sc_lat_praktikum_01](./main/latihan/01) - [preview](https://ariaf.my.id/praktikum_uiux/latihan/01)
 - [sc_lat_praktikum_02](./main/latihan/02) - [preview](https://ariaf.my.id/praktikum_uiux/latihan/02)
 - [sc_lat_praktikum_03](./main/latihan/03)
-  - [preview layout](./latihan/03/)
-  - [preview frame](./latihan/03/home.html)
+  - [preview layout](https://ariaf.my.id/praktikum_uiux/latihan/03/)
+  - [preview frame](https://ariaf.my.id/praktikum_uiux/latihan/03/home.html)
 - [sc_lat_praktikum_04](./latihan/04/alpukat.html) - [preview_alpukat](https://ariaf.my.id/praktikum_uiux/latihan/04/alpukat.html)
 
 ---
