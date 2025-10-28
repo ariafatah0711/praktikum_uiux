@@ -6,8 +6,8 @@ Rombel: TI07
 - [sc_tugas_praktikum_1](./praktikum_01) - [preview](https://ariaf.my.id/praktikum_uiux/01_praktikum_cv)
 - [sc_tugas_praktikum_2_cart](./praktikum_02_cart) - [preview](https://ariaf.my.id/praktikum_uiux/02_praktikum_cart)
 - [sc_tugas_praktikum_2_form](./praktikum_02_form) - [preview](https://ariaf.my.id/praktikum_uiux/02_praktikum_form)
-- [sc_tugas_praktikum_3_](./praktikum_03_web_profile) - [preview](https://ariaf.my.id/praktikum_uiux/03_praktikum_web_profile)
-- [sc_tugas_praktikum_3_](./04_praktikum_css) - [preview](https://ariaf.my.id/praktikum_uiux/04_praktikum_css)
+- [sc_tugas_praktikum_3_web_profile](./praktikum_03_web_profile) - [preview](https://ariaf.my.id/praktikum_uiux/03_praktikum_web_profile)
+- [sc_tugas_04_praktikum_css](./04_praktikum_css) - [preview_burung](https://ariaf.my.id/praktikum_uiux/04_praktikum_css/burung.html)
 
 ## latihan di kelas
 - [sc_lat_praktikum_01](./main/latihan/01) - [preview](https://ariaf.my.id/praktikum_uiux/latihan/01)
@@ -15,7 +15,7 @@ Rombel: TI07
 - [sc_lat_praktikum_03](./main/latihan/03)
   - [preview layout](./latihan/03/)
   - [preview frame](./latihan/03/home.html)
-- [sc_lat_praktikum_04](./latihan/04/alpukat.html) - [preview](https://ariaf.my.id/praktikum_uiux/latihan/04/alpukat.html)
+- [sc_lat_praktikum_04](./latihan/04/alpukat.html) - [preview_alpukat](https://ariaf.my.id/praktikum_uiux/latihan/04/alpukat.html)
 
 ---
 
