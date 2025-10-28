@@ -1,0 +1,295 @@
+/* ################## */
+/* ===== GLOBAL ===== */
+/* ################## */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+
+    /* DEBUG */
+    /* border: 0.1em solid rgba(255, 0, 0, 0.1); */
+}
+
+body {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1em;
+    font-family: sans-serif;
+    background: #f8f6f3;
+}
+
+/* ################## */
+/* ===== HEADER ===== */
+/* ################## */
+#header {
+    width: 80%;
+    max-width: 900px;
+    margin: 80px auto 40px;
+    padding: 1.5em 2em;
+    text-align: center;
+    background: #fff8f0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    h1 {
+        margin-bottom: 1em;
+        color: #553b2c;
+    }
+
+    blockquote {
+        font-style: italic;
+        color: #333;
+        line-height: 1.6;
+    }
+
+    #soekarno {
+        display: block;
+        margin-top: .5em;
+        font-weight: bold;
+        color: #a55;
+    }
+}
+
+/* ===== NAVIGASI ===== */
+#navigasi {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+
+    background: #333;
+    padding: 8px 16px;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+    transition: top 0.4s ease, opacity 0.3s ease;
+    z-index: 1000;
+
+    ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+
+        li {
+            margin: 0 10px;
+
+            a {
+                color: #fff;
+                text-decoration: none;
+                padding: 8px 14px;
+                border-radius: 6px;
+                transition: background 0.2s;
+
+                &:hover {
+                    background: #555;
+                }
+            }
+        }
+    }
+}
+
+/* ===== EFEK SEMBUNYI SAAT DIAM ===== */
+body.scrolled #navigasi {
+    top: -60px;
+    opacity: 0;
+}
+
+/* ################## */
+/* ====== MAIN ====== */
+/* ################## */
+/* GAMBAR */
+.gambar {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding: 15px 0;
+    margin-bottom: 20px;
+    overflow-y: hidden;
+    overflow-x: auto;
+
+    img {
+        width: 100%;
+        max-width: 450px;
+        display: block;
+        border-radius: 12px;
+
+        cursor: pointer;
+    }
+}
+
+/* KOLEKSI */
+.koleksi {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    column-gap: 30px;
+    row-gap: 30px;
+
+    margin: 20px auto;
+    max-width: 1000px;
+
+    img {
+        width: 100%;
+        max-width: 300px;
+
+        aspect-ratio: 1 / 1;
+        object-fit: fill;
+        border-radius: 12px;
+        cursor: pointer;
+    }
+}
+
+/* ISI */
+.isi {
+    display: flex;
+    gap: 20px;
+}
+
+/* PROFILE, beternak */
+#profil,
+#beternak {
+    width: 100%;
+    margin: 80px auto 40px;
+    padding: 1.5em 2em;
+    background: #fff8f0;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#profil {
+    ul {
+        list-style: disc inside;
+        padding-left: 1em;
+        line-height: 1.8;
+        color: #333;
+
+        li {
+            margin-bottom: 0.8em;
+            text-align: justify;
+        }
+    }
+}
+
+#berternak {
+    ol {
+        list-style: decimal inside;
+        padding-left: 1em;
+        line-height: 1.8;
+        color: #555;
+
+        li {
+            margin-bottom: 0.8em;
+            text-align: justify;
+        }
+    }
+}
+
+/* PROMO */
+.promo {
+    width: 85%;
+    max-width: 900px;
+    margin: 80px auto 40px;
+    padding: 2em;
+    background: #fff8f0;
+    border-radius: 12px;
+    text-align: center;
+    color: #553b2c;
+
+    del {
+        color: #999;
+    }
+
+    strong {
+        color: #a55;
+        font-size: 1.2em;
+    }
+
+    #Wa {
+        display: inline-block;
+        margin-top: 0.5em;
+        font-weight: bold;
+        color: #008b5e;
+    }
+}
+
+/* list toko */
+.promo ol {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.5em;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    li {
+        margin: 0.4em 0;
+
+        a {
+            color: #a55;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+        }
+    }
+
+}
+
+/* ################## */
+/* ###### CLASS ##### */
+/* ################## */
+.title {
+    font-size: 1.5em;
+    margin: 10px 0;
+    color: #553b2c;
+    text-align: center;
+}
+
+/* ################## */
+/* ##### ELEMENT #### */
+/* ################## */
+img {
+    &:hover {
+        transform: scale(1.05);
+        transition: transform 0.3s ease;
+    }
+}
+
+p {
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: justify;
+    text-indent: 2em;
+    line-height: 1.6;
+
+    span {
+        display: inline;
+        font-weight: bold;
+        color: #555;
+    }
+}
+
+/* ################## */
+/* ### RESPONSIVE ### */
+/* ################## */
+@media (max-width: 600px) {
+    .gambar {
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            min-width: auto;
+            min-height: auto;
+        }
+    }
+
+    .isi {
+        flex-direction: column;
+    }
+}
