@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    /* margin: 0; */
+    /* padding: 0; */
+
+    /* debug */
+    /* border: 0.1em solid red; */
+}
+
+body {
+    background-color: lightblue;
+    color: black;
+    padding: 0 0.5em;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+}
+
+/* main */
+.image {
+    border: 5px solid #3fd438;
+    border-radius: 25px;
+    display: flex;
+    margin: auto;
+    /* singkatan dari margin-left: auto, dan margi-right: auto*/
+}
+
+.foto {
+    background-color: lightcyan;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    padding: 1em;
+
+    & img {
+        width: 200px;
+        height: 200px;
+        margin: 0;
+    }
+}
+
+.promo {
+    text-align: center;
+    color: red;
+}
+
+.cod {
+    margin: auto;
+    width: 50%;
+
+    & p {
+        width: 100%;
+        background-color: aqua;
+        border: 1px dotted red;
+        border-radius: 10px;
+        text-align: center;
+        font-weight: bold;
+        color: blue;
+        padding: 1em 0;
+    }
+}
+
+#tombol {
+    display: flex;
+    margin: auto;
+    border: 2px solid whitesmoke;
+    color: black;
+    background-color: yellow;
+}
