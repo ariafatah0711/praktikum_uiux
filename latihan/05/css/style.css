@@ -1,0 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    /* DEBUG */
+    /* border: 0.1em dotted red; */
+}
