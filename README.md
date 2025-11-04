@@ -25,28 +25,39 @@ Rombel: TI07
 <summary><b>Membuat Branch Baru dari Folder Tertentu</b></summary>
 
 ```bash
-# clone repo bersih
-git clone https://github.com/ariafatah0711/praktikum_uiux.git tugas_clean
-cd tugas_clean
+# === Konfigurasi Variabel ===
+$REPO_URL = "https://github.com/ariafatah0711/praktikum_uiux.git"
+$FOLDER_NAME = "05_praktikum_box"
+$BRANCH_NAME = "praktikum_05"
+$TEMP_DIR = "tugas_clean"
 
-# pastikan di main
+# === Eksekusi ===
+Write-Host "🌀 Cloning repository..."
+git clone $REPO_URL $TEMP_DIR
+
+Set-Location $TEMP_DIR
+
+Write-Host "✅ Checkout ke branch main..."
 git checkout main
 
-# filter repo jadi hanya folder 01_praktikum_cv
-git filter-repo --subdirectory-filter 01_praktikum_cv --force
+Write-Host "🔍 Filter repo hanya folder $FOLDER_NAME..."
+git filter-repo --subdirectory-filter $FOLDER_NAME --force
 
-# buat branch baru dari hasil filter
-git checkout -b praktikum_01
+Write-Host "🌿 Buat branch baru $BRANCH_NAME..."
+git checkout -b $BRANCH_NAME
 
-# tambahkan lagi remote
-git remote add origin https://github.com/ariafatah0711/praktikum_uiux.git
+Write-Host "🔗 Tambahkan remote origin..."
+git remote add origin $REPO_URL
 
-# push branch hasil filter ke GitHub
-git push -u origin praktikum_01 --force
+Write-Host "🚀 Push branch hasil filter ke GitHub..."
+git push -u origin $BRANCH_NAME --force
 
-# keluar dari folder dan hapus repo lokal
-cd ..
-Remove-Item -Recurse -Force .\tugas_clean
+Set-Location ..
+
+Write-Host "🧹 Hapus repo lokal..."
+Remove-Item -Recurse -Force .\$TEMP_DIR
+
+Write-Host "🎉 Selesai! Branch $BRANCH_NAME sudah di-push ke repo."
 ```
 
 </details>
@@ -58,6 +69,28 @@ Remove-Item -Recurse -Force .\tugas_clean
 git checkout main
 git branch -D praktikum_01
 git push origin --delete praktikum_01
+```
+
+</details>
+
+<details>
+<summary><b>Template Readme</b></summary>
+
+```md
+# praktikum 1
+### Nama  : Aria Fatah Anom
+### Rombel: TI07
+
+repo  : https://github.com/ariafatah0711/praktikum_uiux \
+branch: praktikum_01
+
+url   : https://github.com/ariafatah0711/praktikum_uiux/tree/praktikum_01 \
+demo  : https://ariaf.my.id/praktikum_uiux/01_praktikum_cv
+
+### use
+```bash
+git clone --branch praktikum_01 --single-branch https://github.com/ariafatah0711/praktikum_uiux.git praktikum_01_aria
+```
 ```
 
 </details>
