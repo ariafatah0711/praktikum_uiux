@@ -8,7 +8,7 @@ Rombel: TI07
 - [sc_tugas_praktikum_2_form](https://github.com/ariafatah0711/praktikum_uiux/tree/main/02_praktikum_form) - [preview](https://ariaf.my.id/praktikum_uiux/02_praktikum_form)
 - [sc_tugas_praktikum_3_web_profile](https://github.com/ariafatah0711/praktikum_uiux/tree/main/03_praktikum_web_profile) - [preview](https://ariaf.my.id/praktikum_uiux/03_praktikum_web_profile)
 - [sc_tugas_04_praktikum_css](https://github.com/ariafatah0711/praktikum_uiux/tree/main/04_praktikum_css) - [preview_burung](https://ariaf.my.id/praktikum_uiux/04_praktikum_css/burung.html)
-- [sc_tugas_05_praktikum_box](https://github.com/ariafatah0711/praktikum_uiux/tree/main/05_praktikum_box) - [preview](https://ariaf.my.id/praktikum_uiux/05_praktikum_box
+- [sc_tugas_05_praktikum_box](https://github.com/ariafatah0711/praktikum_uiux/tree/main/05_praktikum_box) - [preview](https://ariaf.my.id/praktikum_uiux/05_praktikum_box)
 
 ## latihan di kelas
 - [sc_lat_praktikum_01](https://github.com/ariafatah0711/praktikum_uiux/tree/main/latihan/01) - [preview](https://ariaf.my.id/praktikum_uiux/latihan/01)
