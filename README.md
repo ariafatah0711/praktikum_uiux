@@ -10,5 +10,5 @@ demo  : https://ariaf.my.id/praktikum_uiux/02_praktikum_cart
 
 ### use
 ```bash
-git clone --branch praktikum_02_cart --single-branch https://github.com/ariafatah0711/praktikum_uiux.git praktikum_02_aria
+git clone --branch praktikum_02_cart --single-branch https://github.com/ariafatah0711/praktikum_uiux.git praktikum_02_cart_aria
 ```
