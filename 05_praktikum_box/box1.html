@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box 1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+            /* DEBUG */
+            /* border: 0.1em dotted red; */
+        }
+
+        /* container */
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 1em;
+            padding: 1em;
+        }
+
+        .box {
+            border: 0.1em solid black;
+            width: 100%;
+            height: calc((100vh / 3) - 2em / 3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+        }
+
+        .box-header {
+            grid-column: 1 / span 2;
+        }
+
+        .bg-green {background-color: green;}
+        .bg-yellow {background-color: yellow;}
+        .bg-red {background-color: red;}
+        .bg-cyan {background-color: cyan;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box-header bg-green"></div>
+        <div class="box bg-yellow"></div>
+        <div class="box bg-red"></div>
+        <div class="box bg-yellow"></div>
+        <div class="box bg-cyan"></div>
+    </div>
+</body>
+</html>

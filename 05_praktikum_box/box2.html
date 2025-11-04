@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box 2</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+            /* DEBUG */
+            /* border: 0.1em dotted red; */
+        }
+
+        /* container */
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            grid-template-rows: 100px calc(100vh - 200px - 4em) 100px;
+            gap: 1em;
+            padding: 1em;
+        }
+
+        .box {
+            border: 0.1em solid black;
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+        }
+
+        .box-2-3 {
+            grid-column: 2 / span 2;
+        }
+
+        .box-1-3 {
+            grid-column: 1 / span 3;
+        }
+
+        .bg-green {background-color: green;}
+        .bg-yellow {background-color: yellow;}
+        .bg-red {background-color: red;}
+        .bg-cyan {background-color: cyan;}
+        .bg-blue {background-color: blue;}
+        .bg-gray {background-color: gray;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box bg-yellow"></div>
+        <div class="box box-2-3 bg-red"></div>
+        <div class="box bg-green box-mid"></div>
+        <div class="box bg-gray"></div>
+        <div class="box bg-cyan"></div>
+        <div class="box box-1-3 bg-blue"></div>
+    </div>
+</body>
+</html>
