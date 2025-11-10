@@ -22,7 +22,7 @@ Rombel: TI07
   - [preview_box_1](https://ariaf.my.id/praktikum_uiux/latihan/05/01_box.html)
   - [preview_box_2](https://ariaf.my.id/praktikum_uiux/latihan/05/02_box.html)
   - [preview_box_gambar_2](https://ariaf.my.id/praktikum_uiux/latihan/05/03_gambar.html)
-- [sc_lat_praktikum_06](https://ariaf.my.id/praktikum_uiux/latihan/06/)
+- [sc_lat_praktikum_06](https://github.com/ariafatah0711/praktikum_uiux/blob/main/latihan/06)
 
 ---
 
