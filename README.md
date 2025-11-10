@@ -9,6 +9,7 @@ Rombel: TI07
 - [sc_tugas_praktikum_3_web_profile](https://github.com/ariafatah0711/praktikum_uiux/tree/main/03_praktikum_web_profile) - [preview](https://ariaf.my.id/praktikum_uiux/03_praktikum_web_profile)
 - [sc_tugas_04_praktikum_css](https://github.com/ariafatah0711/praktikum_uiux/tree/main/04_praktikum_css) - [preview_burung](https://ariaf.my.id/praktikum_uiux/04_praktikum_css/burung.html)
 - [sc_tugas_05_praktikum_box](https://github.com/ariafatah0711/praktikum_uiux/tree/main/05_praktikum_box) - [preview](https://ariaf.my.id/praktikum_uiux/05_praktikum_box)
+- [sc_06_praktikum_flexbox](https://github.com/ariafatah0711/praktikum_uiux/tree/main/06_praktikum_flexbox) - [preview](https://ariaf.my.id/praktikum_uiux/06_praktikum_flexbox)
 
 ## latihan di kelas
 - [sc_lat_praktikum_01](https://github.com/ariafatah0711/praktikum_uiux/tree/main/latihan/01) - [preview](https://ariaf.my.id/praktikum_uiux/latihan/01)
@@ -21,6 +22,7 @@ Rombel: TI07
   - [preview_box_1](https://ariaf.my.id/praktikum_uiux/latihan/05/01_box.html)
   - [preview_box_2](https://ariaf.my.id/praktikum_uiux/latihan/05/02_box.html)
   - [preview_box_gambar_2](https://ariaf.my.id/praktikum_uiux/latihan/05/03_gambar.html)
+- [sc_lat_praktikum_06](https://ariaf.my.id/praktikum_uiux/latihan/06/)
 
 ---
 
@@ -32,8 +34,8 @@ Rombel: TI07
 ```bash
 # === Konfigurasi Variabel ===
 $REPO_URL = "https://github.com/ariafatah0711/praktikum_uiux.git"
-$FOLDER_NAME = "05_praktikum_box"
-$BRANCH_NAME = "praktikum_05"
+$FOLDER_NAME = "06_praktikum_flexbox"
+$BRANCH_NAME = "praktikum_06"
 $TEMP_DIR = "tugas_clean"
 
 # === Eksekusi ===
