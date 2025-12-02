@@ -33,6 +33,8 @@ Rombel: TI07
 ---
 
 ## Catetan
+**form**: https://forms.gle/cQesQgKDnkjYtNef8
+**docs**: https://docs.google.com/spreadsheets/d/1IUPTnGc7LlGrlGxrRLGDpt7VKDsclw35StViNifc2ek/edit?usp=sharing
 
 <details>
 <summary><b>Membuat Branch Baru dari Folder Tertentu</b></summary>
@@ -107,9 +109,3 @@ git clone --branch praktikum_01 --single-branch https://github.com/ariafatah0711
 ```
 
 </details>
-
----
-
-## url
-**form**: https://forms.gle/cQesQgKDnkjYtNef8
-**docs**: https://docs.google.com/spreadsheets/d/1IUPTnGc7LlGrlGxrRLGDpt7VKDsclw35StViNifc2ek/edit?usp=sharing
