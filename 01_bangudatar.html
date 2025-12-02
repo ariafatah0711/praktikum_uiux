@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bangun Datar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px 40px;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            gap: 15px;
+        }
+
+        label {
+            font-size: 18px;
+        }
+
+        input {
+            padding: 8px 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 200px;
+        }
+
+        span {
+            font-weight: bold;
+            margin-left: 10px;
+        }
+    </style>
+    <script>
+        function LuasKelilingLingkaran() {
+            const r = parseFloat(document.getElementById("r").value)
+            const ElementKeliling = document.getElementById("result-keliling-lingkaran")
+            const ElementLuas = document.getElementById("result-luas-lingkaran")
+
+            const keliling = 2 * Math.PI * r
+            const luas = Math.PI * r * r
+
+            if (isNaN(luas) || isNaN(keliling)) {
+                ElementKeliling.innerText = 0
+                ElementLuas.innerText = 0
+                return
+            }
+
+            ElementKeliling.innerText = keliling.toFixed(3)
+            ElementLuas.innerText = luas.toFixed(3)
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Bangun Datar</h1>
+    </header>
+
+    <div class="container">
+        <h2>Lingkaran</h2>
+        <label for="r">Jari Jari <input id="r" type="number" oninput="LuasKelilingLingkaran()"></label>
+
+        <h4>Keliling: <span id="result-keliling-lingkaran">0</span></h4>
+        <h4>Luas: <span id="result-luas-lingkaran">0</span></h4>
+    </div>
+</body>
+</html>
