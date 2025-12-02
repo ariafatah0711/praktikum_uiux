@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        #container {
+            background-color: blue;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 500px;
+            border: 1px solid #000;
+            padding: 20px 5px;
+        }
+
+        input, select {
+            margin-bottom: 10px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body">
+    <h1>Simple Calculator</h1>
+
+    <div id="container" onmouseover="makeRed()" onmouseout="makeBlue()">
+        <input type="number" id="bil1" value="0" onchange="hitung()">
+        <!-- operasi : <input type="text" id="operasi" value="+"><br> -->
+        <select name="operasi" id="operasi" onchange="hitung()">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="number" id="bil2" value="0" onchange="hitung()">
+        <button onclick="hitung()">Submit</button>
+
+        <div style="padding: 10px;">
+            Hasil : <span id="hasil">0</span>
+        </div>
+    </div>
+
+    <script>
+        function hitung() {
+            let hasil = 0
+
+            let bil1 = document.getElementById("bil1").value;
+            let bil2 = document.getElementById("bil2").value;
+            let operasi = document.getElementById("operasi").value;
+            let hasilElement = document.getElementById("hasil");
+
+            ListOperasi = ["+", "-", "*", "/"]
+            if (ListOperasi.includes(operasi)) {
+                hasil = eval(bil1 + operasi + bil2)
+            } else {
+                hasil = "Operasi tidak dikenali"
+            }
+
+            hasilElement.innerHTML = hasil
+        }
+
+        function makeBlue() {
+            let container = document.getElementById("container");
+            container.style.backgroundColor = "blue";
+        }
+        function makeRed() {
+            let container = document.getElementById("container");
+            container.style.backgroundColor = "red";
+        }
+
+        function Welcome() {
+            alert("Selamat datang di kalkulator sederhana");
+        }
+        // window.onload = Welcome;
+    </script>
+</body>
+</html>
