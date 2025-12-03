@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01</title>
+    <script>
+        let buah = ["Mangga", "Apel", "Pisang"];
+        buah.push("Jeruk");
+        // console.log(buah);
+        // console.log(buah[2]);
+
+        for (let i = 0; i < buah.length; i++) {
+            console.log(`buah ke ${i} ${buah[i]}`);
+        }
+
+        /* isi data */
+        function isidata() {
+            let selectElement = document.getElementsByName("buah")[0];
+            for (let i = 0; i < buah.length; i++) {
+                let optionElement = document.createElement("option")
+                optionElement.value = buah[i]
+                optionElement.innerHTML = buah[i]
+                selectElement.appendChild(optionElement)
+            }
+        }
+
+        /* pilih */
+        function pilih() {
+            let selectElement = document.getElementsByName("buah")[0];
+            let buahTerpilih = selectElement.options[selectElement.selectedIndex].value
+
+            console.log(`Buah yang dipilih adalah ${buahTerpilih}`)
+            alert(`Buah yang dipilih adalah ${buahTerpilih}`)
+        }
+     </script>
+</head>
+<body onload="isidata()">
+    <form>
+        Pilih Buah Anda:
+        <select name="buah" onchange="pilih()">
+
+        </select>
+    </form>
+</body>
+</html>

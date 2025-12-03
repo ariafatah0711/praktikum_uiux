@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05 form validation</title>
+</head>
+<body>
+
+    <form>
+        <label for="name">Name: </label>
+        <input type="text" id="name" name="name" placeholder="masukan nama anda!">
+        <span id="errorName"></span><br>
+
+        <label for="email">Email: </label>
+        <input type="email" id="email" name="email" placeholder="masukan email anda!">
+        <span id="errorEmail"></span><br>
+
+        <label for="jam_keberangkatan">Jam Keberangkatan: </label>
+        <input type="time" id="jam_keberangkatan" name="jam_keberangkatan">
+        <span id="errorJamKeberangkatan"></span><br>
+
+        <label for="tujuan-keberangkatan">Tujuan Keberangkatan: </label>
+        <input type="text" id="tujuan-keberangkatan" name="tujuan-keberangkatan" placeholder="masukan tujuan keberangkatan anda!">
+        <span id="errorTujuanKeberangkatan"></span><br>
+
+        <label for="jumlah-ticket">Jumlah Ticket: </label>
+        <input type="number" id="jumlah-ticket" name="jumlah-ticket" placeholder="masukan jumlah ticket anda!">
+        <span id="errorJumlahTicket"></span><br>
+
+        <input type="button" value="submit" onclick="formValidation()">
+    </form>
+
+    <div>
+        <h1>Hasil Input Validation</h1>
+        <p id="hasilName"></p>
+        <p id="hasilEmail"></p>
+        <p id="hasilJamKeberangkatan"></p>
+        <p id="hasilTujuanKeberangkatan"></p>
+        <p id="hasilJumlahTicket"></p>
+    </div>
+
+    <script>
+        function formValidation()  {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const jamKeberangkatan = document.getElementById('jam_keberangkatan').value;
+            const tujuanKeberangkatan = document.getElementById('tujuan-keberangkatan').value;
+            const jumlahTicket = document.getElementById('jumlah-ticket').value;
+
+            // Jika semua data benar
+            if (name.toLowerCase() == "aria" && email == "aria@gmail.com" && jamKeberangkatan == "06:00" &&
+                tujuanKeberangkatan.toLowerCase() == "kalimantan" && jumlahTicket == "3") {
+                document.getElementById('hasilName').innerText = `Name: ${name}`;
+                document.getElementById('hasilEmail').innerText = `Email: ${email}`;
+                document.getElementById('hasilJamKeberangkatan').innerText = `Jam Keberangkatan: ${jamKeberangkatan}`;
+                document.getElementById('hasilTujuanKeberangkatan').innerText = `Tujuan Keberangkatan: ${tujuanKeberangkatan}`;
+                document.getElementById('hasilJumlahTicket').innerText = `Jumlah Ticket: ${jumlahTicket}`;
+            }
+
+            // Validasi name & email
+            if (name.toLowerCase() != "aria" || email != "aria@gmail.com") {
+                document.getElementById("errorName").innerHTML = " DATA TIDAK DITEMUKAN";
+                document.getElementById("errorName").style = "color:red";
+                document.getElementById("errorEmail").innerHTML = " DATA TIDAK DITEMUKAN";
+                document.getElementById("errorEmail").style = "color:red";
+            }
+
+            // Validasi jam
+            if (jamKeberangkatan != "06:00") {
+                document.getElementById("errorJamKeberangkatan").innerHTML = " DATA TIDAK DITEMUKAN";
+                document.getElementById("errorJamKeberangkatan").style = "color:red";
+            }
+
+            // Validasi tujuan & tiket
+            if (tujuanKeberangkatan.toLowerCase() != "kalimantan") {
+                document.getElementById("errorTujuanKeberangkatan").innerHTML = " DATA TIDAK DITEMUKAN";
+                document.getElementById("errorTujuanKeberangkatan").style = "color:red";
+            }
+
+            if (jumlahTicket != "3") {
+                document.getElementById("errorJumlahTicket").innerHTML = " DATA TIDAK DITEMUKAN";
+                document.getElementById("errorJumlahTicket").style = "color:red";
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02</title>
+    <script>
+        let player_1 = {
+            name : "player_1",
+            power : 1000,
+            eat : function(portion) {
+                console.log(`${this.name} eating ${portion} portion`)
+                this.power = this.power + (portion * 100)
+            },
+            attack : function(enemy) {
+                console.log(`${this.name} Attack ${enemy.name} with ${this.power}`);
+                this.power = this.power - 250
+                enemy.power = enemy.power - 500
+            }
+        }
+
+        let player_2 = {
+            name : "player_2",
+            power : 2000,
+            eat : function(portion) {
+                console.log(`${this.name} eating ${portion} portion`)
+                this.power = this.power + (portion * 200)
+            },
+            attack : function(enemy) {
+                console.log(`${this.name} Attack ${enemy.name} with ${this.power}`);
+                this.power = this.power - 200
+                enemy.power = enemy.power - 300
+            }
+        }
+
+        function header() {
+            console.log("=== Player ===")
+            console.log(`${player_1.name} [${player_1.power}]`)
+            console.log(`${player_2.name} [${player_2.power}]`)
+            console.log("==============")
+        }
+
+        header()
+        player_1.eat(2)
+        header()
+        player_2.eat(3)
+        header()
+        player_1.attack(player_2)
+        header()
+        player_2.attack(player_1)
+        header()
+
+        // console.log(`${player_1.name} [${player_1.power}]`)
+        // console.log(`${player_2.name} [${player_2.power}]`)
+
+    </script>
+</head>
+<body>
+</body>
+</html>
