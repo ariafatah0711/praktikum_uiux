@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02 - Kurs</title>
+    <style>
+        body { font-family: Arial; padding: 20px; }
+        fieldset { padding: 15px; margin: auto; border: 1px solid #ccc;}
+        table { width: 100%; border-collapse: collapse; table-layout: auto; }
+        th:nth-child(3) { width: 80%; } /* Kolom ke-3 mengambil 80% */
+        th, td { padding: 8px 12px; text-align: left; border: 1px solid #ccc;}
+        input, select { width: 100% }
+        legend { font-weight: bold; }
+        td span { word-break: break-all; display: block; }
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Kurs To Rupiah</legend>
+            <table>
+                <thead>
+                    <th>Masukan Nilai</th>
+                    <th>Mata Uang</th>
+                    <th>Nilai Rupiah</th>
+                </thead>
+                <tbody>
+                    <td><input id="nilai" type="number" placeholder="0"></td>
+                    <td><select name="mata-uang" id="mata-uang">
+                        <!-- <option value="usd">dollar US</option>
+                        <option value="sd">dollar Singapure</option>
+                        <option value="rm">Ringgit Malaysia</option>
+                        <option value="yen">Yen Juan</option>
+                        <option value="eu">Euro</option>
+                        <option value="riyal">Riyal Arab Saudi</option> -->
+                    </select></td>
+                    <td><span id="result">0</span></td>
+                </tbody>
+            </table>
+        </fieldset>
+    </form>
+
+    <script>
+        const listMataUang = {
+            usd: {
+                name: "Dollar Amerika (USD)",
+                kurs: 15000
+            },
+            sd: {
+                name: "Dollar Singapura (SGD)",
+                kurs: 11000
+            },
+            rm: {
+                name: "Ringgit Malaysia (MYR)",
+                kurs: 3500
+            },
+            yen: {
+                name: "Yen Jepang (JPY)",
+                kurs: 130
+            },
+            eu: {
+                name: "Euro (EUR)",
+                kurs: 16000
+            },
+            riyal: {
+                name: "Riyal Arab Saudi (SAR)",
+                kurs: 4000
+            }
+        };
+
+        const select = document.getElementById("mata-uang");
+        const nilaiInput = document.getElementById("nilai");
+        const resultSpan = document.getElementById("result");
+
+        Object.entries(listMataUang).map(([key, value, ]) => {
+            const opt = document.createElement("option");
+            opt.value = key;
+            opt.textContent = value.name;
+            select.appendChild(opt);
+        })
+
+        nilaiInput.addEventListener("input", calculateKurs);
+        select.addEventListener("change", calculateKurs);
+
+        function calculateKurs() {
+            const nilai = parseFloat(nilaiInput.value) || 0;
+            const mataUang = select.value;
+            const kurs = listMataUang[mataUang].kurs;
+            const result = nilai * kurs;
+            resultSpan.textContent = result.toLocaleString("id-ID", { style: "currency", currency: "IDR" });
+        }
+    </script>
+</body>
+</html>
