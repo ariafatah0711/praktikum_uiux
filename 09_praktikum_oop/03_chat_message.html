@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Chat</title>
+<style>
+  body { font-family: Arial; padding: 20px; background: #f0f0f0; }
+  #chatBox { height: 300px; overflow-y: auto; background: #fff; padding: 10px; border-radius: 5px; margin-bottom: 10px; }
+  .message { margin: 5px 0; padding: 5px 10px; border-radius: 5px; }
+  .user1 { background: #e3f2fd; text-align: right;}
+  .user1::before { content: "You: "; font-weight: bold;}
+  .user2 { background: #f5f5f5; text-align: left;}
+  .user2::before { content: "Bot: "; font-weight: bold;}
+  input { padding: 5px; }
+  button { padding: 5px; }
+</style>
+</head>
+<body>
+
+<div id="chatBox"></div>
+<label for="message_user1"></label>
+<input type="text" id="message_user1" placeholder="Type a message for User 1">
+<button onclick="sendMessage('user1')">Send</button><br><br>
+<label for="message_user2"></label>
+<input type="text" id="message_user2" placeholder="Type a message for User 2">
+<button onclick="sendMessage('user2')">Send</button>
+
+<script>
+  const chatBox = document.getElementById("chatBox");
+  function sendMessage(user) {
+    const input = document.getElementById("message_" + user);
+    const text = input.value.trim();
+    if (!text) return;
+
+    addMessage(user, text);
+
+    input.value = '';
+    chatBox.scrollTop = chatBox.scrollHeight;
+  }
+
+  function addMessage(sender, text) {
+    const div = document.createElement("div");
+    div.className = `message ${sender}`;
+    div.textContent = text;
+    chatBox.appendChild(div);
+  }
+</script>
+
+</body>
+</html>

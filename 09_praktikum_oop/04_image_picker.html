@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+        #image-display { margin-top: 20px; }
+        #image-display img { max-width: 300px; max-height: 300px; border-radius: 10px; }
+        select { padding: 10px; font-size: 16px;}
+        option { padding: 10px; font-size: 16px; }
+    </style>
+</head>
+<body>
+
+    <h1>Best Character Media - by Aria</h1>
+    <select name="image-picker" id="image-picker">
+        <option value="tomoya_okazaki">Tomoya Okazaki</option>
+        <option value="eliot">Eliot</option>
+        <option value="kumiko_euphonium">Kumiko Euphonium</option>
+        <option value="kurosawa">Kurosawa</option>
+        <option value="okabe_rintaro">Okabe Rintaro</option>
+        <option value="suzumiya_haruhi">Suzumiya Haruhi</option>
+    </select>
+    <div id="image-display"></div>
+
+    <script>
+        const imagePicker = document.getElementById('image-picker');
+        const updateImage = () => {
+            const selectedValue = imagePicker.value;
+            let imageUrl = '';
+
+            switch(selectedValue) {
+                case 'tomoya_okazaki':
+                    imageUrl = 'https://i.pinimg.com/1200x/9c/0c/9d/9c0c9d433c890e5d96f89dcb2ae9b395.jpg';
+                    break;
+                case 'eliot':
+                    imageUrl = 'https://i.pinimg.com/736x/e2/dd/c5/e2ddc5be741863bd969a853c44a5c4c0.jpg';
+                    break;
+                case 'kumiko_euphonium':
+                    imageUrl = 'https://i.pinimg.com/1200x/22/cc/c1/22ccc16ae14183f55fe579c41e802e75.jpg';
+                    break;
+                case 'kurosawa':
+                    imageUrl = 'https://i.pinimg.com/736x/57/5e/9f/575e9fa0156bf255d54757c2b6be168f.jpg';
+                    break;
+                case 'okabe_rintaro':
+                    imageUrl = 'https://i.pinimg.com/736x/a5/2d/bd/a52dbd887a08204c7960c7e035167eef.jpg';
+                    break;
+                case 'suzumiya_haruhi':
+                    imageUrl = 'https://i.pinimg.com/736x/03/33/16/033316b4d6f9089d5d32079c0e41ee8f.jpg';
+                    break;
+                default:
+                    imageUrl = '';
+            }
+
+            if (imageUrl) {
+                const imageDisplay = document.getElementById('image-display');
+                imageDisplay.innerHTML = `<img src="${imageUrl}" alt="${selectedValue}" style="max-width: 100%; height: auto;">`;
+            }
+        }
+        imagePicker.addEventListener('change', updateImage);
+        updateImage();
+    </script>
+
+</body>
+</html>
