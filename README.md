@@ -7,15 +7,11 @@ Rombel: TI07
 - [sc_tugas_praktikum_2_cart](https://github.com/ariafatah0711/praktikum_uiux/tree/main/02_praktikum_cart) - [preview](https://ariaf.my.id/praktikum_uiux/02_praktikum_cart)
 - [sc_tugas_praktikum_2_form](https://github.com/ariafatah0711/praktikum_uiux/tree/main/02_praktikum_form) - [preview](https://ariaf.my.id/praktikum_uiux/02_praktikum_form)
 - [sc_tugas_praktikum_3_web_profile](https://github.com/ariafatah0711/praktikum_uiux/tree/main/03_praktikum_web_profile) - [preview](https://ariaf.my.id/praktikum_uiux/03_praktikum_web_profile)
-- [sc_tugas_04_praktikum_css](https://github.com/ariafatah0711/praktikum_uiux/tree/main/04_praktikum_css) - [preview_burung](https://ariaf.my.id/praktikum_uiux/04_praktikum_css/burung.html)
+- [sc_tugas_04_praktikum_css](https://github.com/ariafatah0711/praktikum_uiux/tree/main/04_praktikum_css) - [preview](https://ariaf.my.id/praktikum_uiux/04_praktikum_css/)
 - [sc_tugas_05_praktikum_box](https://github.com/ariafatah0711/praktikum_uiux/tree/main/05_praktikum_box) - [preview](https://ariaf.my.id/praktikum_uiux/05_praktikum_box)
 - [sc_06_praktikum_flexbox](https://github.com/ariafatah0711/praktikum_uiux/tree/main/06_praktikum_flexbox) - [preview](https://ariaf.my.id/praktikum_uiux/06_praktikum_flexbox)
 - [07_link_figma](https://www.figma.com/site/rQO9BkDnHH78yoPwddT4oR/UIUX_01_AriaFatah?node-id=0-1&t=tYxOyxlMKTSxjKRJ-1) - [preview](./07_figma/images/README/image.png)
-- [sc_tugas_08_praktikum_box](https://github.com/ariafatah0711/praktikum_uiux/tree/main/08_praktikum_js)
-  - [preview 01_bangudatar.html](https://ariaf.my.id/praktikum_uiux/08_praktikum_js/01_bangudatar.html)
-  - [preview 02_kurs.html](https://ariaf.my.id/praktikum_uiux/08_praktikum_js/02_kurs.html)
-  - [preview 03_parkir.html](https://ariaf.my.id/praktikum_uiux/08_praktikum_js/03_parkir.html)
-  - [preview 04_calculator.html](https://ariaf.my.id/praktikum_uiux/08_praktikum_js/04_calculator.html)
+- [sc_tugas_08_praktikum_box](https://github.com/ariafatah0711/praktikum_uiux/tree/main/08_praktikum_js) - [preview](https://ariaf.my.id/praktikum_uiux/08_praktikum_js)
 
 ## latihan di kelas
 - [sc_lat_praktikum_01](https://github.com/ariafatah0711/praktikum_uiux/tree/main/latihan/01) - [preview](https://ariaf.my.id/praktikum_uiux/latihan/01)

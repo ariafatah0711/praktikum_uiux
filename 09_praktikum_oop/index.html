@@ -5,25 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>List File</title>
     <style>
-        body { font-family: Arial, sans-serif; padding: 20px; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container { max-width: 600px; margin: 0 auto; }
+        h1 {
+            color: white;
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 2.5em;
+        }
         ul { list-style-type: none; padding: 0; }
-        li { margin: 10px 0; }
-        a { text-decoration: none; color: #007BFF; }
-        a:hover { text-decoration: underline; }
-        footer { margin-top: 20px; font-size: 0.9em; color: #555; }
+        li {
+            margin: 12px 0;
+            background: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        li:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        a {
+            text-decoration: none;
+            color: #667eea;
+            font-weight: 500;
+            display: block;
+        }
+        a:hover { color: #764ba2; }
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background: white;
+            color: #667eea;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .back-link:hover {
+            background: #f0f0f0;
+            transform: translateX(-3px);
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 0.9em;
+            color: rgba(255,255,255,0.8);
+        }
     </style>
 </head>
 <body>
-
-    <h1>List of Files</h1>
-    <ul>
-        <li><a href="./01_login.html">01_login.html</a>
-        <li><a href="./02_kurs.html">02_kurs.html</a>
-        <li><a href="./03_Chat_Message.html">03_Chat_Message.html</a>
-        <li><a href="./04_image_picker.html">04_image_picker.html</a>
-        <li><a href="./05_form_validation.html">05_form_validation.html</a>
-    </ul>
-    <footer>by Aria Fatah</footer>
-
+    <div class="container">
+        <h1>09_Praktikum_OOP</h1>
+        <ul>
+            <li><a href="./01_login.html">01 Login Form</a></li>
+            <li><a href="./02_kurs.html">02 Kurs Exchange</a></li>
+            <li><a href="./03_Chat_Message.html">03 Chat Message</a></li>
+            <li><a href="./04_image_picker.html">04 Image Picker</a></li>
+            <li><a href="./05_form_validation.html">05 Form Validation</a></li>
+        </ul>
+        <a href="../" class="back-link">← Back</a>
+        <footer>by Aria Fatah</footer>
+    </div>
 </body>
 </html>
