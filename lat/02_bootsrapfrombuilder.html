@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form</title>
+  </head>
+  <body class="container-fluid p-5">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <h1 class="pb-2 pt-2">Formulir Pendaftaran Peminatan Teknik Informatika STT Nurul FIkri</h1>
+
+    <form>
+      <div class="form-group row">
+        <label for="text" class="col-4 col-form-label">Nama</label>
+        <div class="col-8">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <i class="fa fa-address-card"></i>
+              </div>
+            </div>
+            <input id="text" name="text" placeholder="masukan nama anda" type="text" class="form-control" />
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="text1" class="col-4 col-form-label">Alamat</label>
+        <div class="col-8">
+          <input id="text1" name="text1" placeholder="masukan alamat anda" type="text" class="form-control" />
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-4">Mapel Favorit</label>
+        <div class="col-8">
+          <div class="custom-control custom-radio custom-control-inline">
+            <input name="radio" id="radio_0" type="radio" class="custom-control-input" value="laki-laki" />
+            <label for="radio_0" class="custom-control-label">laki-laki</label>
+          </div>
+          <div class="custom-control custom-radio custom-control-inline">
+            <input name="radio" id="radio_1" type="radio" class="custom-control-input" value="perempuan" />
+            <label for="radio_1" class="custom-control-label">perempuan</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label class="col-4">Mapel hari ini yang dihadiri</label>
+        <div class="col-8">
+          <div class="custom-control custom-checkbox custom-control-inline">
+            <input name="checkbox" id="checkbox_0" type="checkbox" class="custom-control-input" value="MK" />
+            <label for="checkbox_0" class="custom-control-label">MK</label>
+          </div>
+          <div class="custom-control custom-checkbox custom-control-inline">
+            <input name="checkbox" id="checkbox_1" type="checkbox" class="custom-control-input" value="UIUX" />
+            <label for="checkbox_1" class="custom-control-label">UIUX</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="textarea" class="col-4 col-form-label">Alasan memilih mapel favorit</label>
+        <div class="col-8">
+          <textarea id="textarea" name="textarea" cols="40" rows="5" class="form-control"></textarea>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="select" class="col-4 col-form-label">peminatan</label>
+        <div class="col-8">
+          <select id="select" name="select" class="custom-select">
+            <option value="AI">AI</option>
+            <option value="cs">cs</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group row">
+        <div class="offset-4 col-8">
+          <button name="submit" type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>
