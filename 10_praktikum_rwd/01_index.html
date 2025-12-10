@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <style>
+    body {
+      overflow: scroll;
+    }
+
+    .carousel-item img {
+      height: 700px;
+      object-fit: cover;
+    }
+
+    .card-img {
+      height: 500px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body class="container-fluid px-5" style="padding-top: 75px">
+  <header>
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top px-5">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="https://ariaf.my.id/assets/images/profile2-128.avif" alt="logo" width="50px" height="50px"
+            class="contain rounded-circle" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="01_index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="01_form.html">Form</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="my-4 text-center">Best Character Anime - by Aria</h1>
+
+        <div id="carouselExampleCaptions" class="carousel slide my-5">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="https://i.pinimg.com/1200x/9c/0c/9d/9c0c9d433c890e5d96f89dcb2ae9b395.jpg"
+                class="d-block w-100 contain" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Tomoya Okazaki - Clannad</h5>
+                <p>
+                  Protagonis dari anime Clannad, seorang siswa SMA yang mengalami transformasi emosional melalui
+                  hubungannya
+                  dengan teman-teman dan keluarganya.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="https://i.pinimg.com/1200x/22/cc/c1/22ccc16ae14183f55fe579c41e802e75.jpg"
+                class="d-block w-100 contain" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Kumiko Oumae - Hibike! Euphonium</h5>
+                <p>
+                  Pemain euphonium yang berjuang meraih kesempurnaan musik bersama klub orkestra Kitauji High School
+                  dalam
+                  perjalanan menuju kompetisi nasional.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="https://i.pinimg.com/736x/03/33/16/033316b4d6f9089d5d32079c0e41ee8f.jpg"
+                class="d-block w-100 contain" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Haruhi Suzumiya - The Melancholy of Haruhi Suzumiya</h5>
+                <p>
+                  Karakter eksentrik dengan kemampuan tidak disadari untuk mengubah realitas, yang mendirikan SOS
+                  Brigade untuk
+                  mencari hal-hal supernatural.
+                </p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <div class="row mb-4">
+      <div class="col-12">
+        <h1 class="text-center">Best Anime - by Aria</h1>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="card h-100">
+          <img
+            src="https://m.media-amazon.com/images/M/MV5BYmJhMDYzYzMtNTVlZS00MzgwLWE3ZjAtN2FhZTBlOGQzZmFmXkEyXkFqcGdeQXVyMzgxODM4NjM@._V1_FMjpg_UX1000_.jpg"
+            class="card-img card-img-top" alt="Steins Gate">
+          <div class="card-body">
+            <h5 class="card-title">Steins Gate</h5>
+            <p class="card-text">Steins Gate merupakan anime tentang time travel dan petualangan ilmuwan yang mencoba
+              mengubah masa depan.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="card h-100">
+          <img src="https://down-id.img.susercontent.com/file/id-11134207-7qul5-lfr03xxim3tacc"
+            class="card-img card-img-top" alt="Code Geass">
+          <div class="card-body">
+            <h5 class="card-title">Code Geass</h5>
+            <p class="card-text">Code Geass merupakan anime tentang pemberontakan dan strategi yang bertema mecha dan
+              kekuatan supernatural.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="card h-100">
+          <img
+            src="https://tse1.mm.bing.net/th/id/OIP.KgrF0QCXHIx_m9cVv8IDxAHaJV?cb=ucfimg2&ucfimg=1&rs=1&pid=ImgDetMain&o=7&rm=3"
+            class="card-img card-img-top" alt="Clannad">
+          <div class="card-body">
+            <h5 class="card-title">Clannad</h5>
+            <p class="card-text">Clannad merupakan anime tentang drama dan kehidupan sehari-hari yang penuh cerita
+              menyentuh hati.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
