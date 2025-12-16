@@ -40,8 +40,8 @@ Rombel: TI07
 ```bash
 # === Konfigurasi Variabel ===
 $REPO_URL = "https://github.com/ariafatah0711/praktikum_uiux.git"
-$FOLDER_NAME = "09_praktikum_oop"
-$BRANCH_NAME = "praktikum_09"
+$FOLDER_NAME = "10_praktikum_rwd"
+$BRANCH_NAME = "praktikum_10"
 $TEMP_DIR = "tugas_clean"
 
 # === Eksekusi ===
