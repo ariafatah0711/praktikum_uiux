@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Form Registrasi - Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <style>
+        body {
+            overflow: scroll;
+        }
+
+        .carousel-item img {
+            height: 700px;
+            object-fit: cover;
+        }
+
+        .card-img {
+            height: 500px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body class="container-fluid px-5" style="padding-top: 75px">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top px-5">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="https://ariaf.my.id/assets/images/profile2-128.avif" alt="logo" width="50px" height="50px"
+                        class="contain rounded-circle" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="signup.html">Registrasi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="my-4 text-center">Register</h1>
+                <div class="container px-5 my-5">
+                    <form id="registrationForm" data-sb-form-api-token="API_TOKEN">
+                        <div class="mb-3">
+                            <label class="form-label" for="fullName">Nama Lengkap</label>
+                            <input class="form-control" id="fullName" type="text" placeholder="Nama Lengkap"
+                                data-sb-validations="required" />
+                            <div class="invalid-feedback" data-sb-feedback="fullName:required">Nama Lengkap is required.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="emailAddress">Email Address</label>
+                            <input class="form-control" id="emailAddress" type="email" placeholder="Email Address"
+                                data-sb-validations="required,email" />
+                            <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is
+                                required.</div>
+                            <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address is not
+                                valid.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="password">Password</label>
+                            <input class="form-control" id="password" type="password" placeholder="Password"
+                                data-sb-validations="required" />
+                            <div class="invalid-feedback" data-sb-feedback="password:required">Password is required.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="confirmPassword">Konfirmasi Password</label>
+                            <input class="form-control" id="confirmPassword" type="password"
+                                placeholder="Konfirmasi Password" data-sb-validations="required" />
+                            <div class="invalid-feedback" data-sb-feedback="confirmPassword:required">Konfirmasi
+                                Password is required.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="birthDate">Tanggal Lahir</label>
+                            <input class="form-control" id="birthDate" type="date" data-sb-validations="required" />
+                            <div class="invalid-feedback" data-sb-feedback="birthDate:required">Tanggal Lahir is
+                                required.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label d-block">Jenis Kelamin</label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" id="male" type="radio" name="gender" value="male"
+                                    data-sb-validations="required" />
+                                <label class="form-check-label" for="male">Laki-laki</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" id="female" type="radio" name="gender" value="female" />
+                                <label class="form-check-label" for="female">Perempuan</label>
+                            </div>
+                            <div class="invalid-feedback" data-sb-feedback="gender:required">Jenis Kelamin is required.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label d-block"></label>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" id="agreeTerms" type="checkbox" name="agreeTerms"
+                                    data-sb-validations="required" />
+                                <label class="form-check-label" for="agreeTerms">Saya setuju dengan syarat dan
+                                    ketentuan</label>
+                            </div>
+                            <div class="invalid-feedback" data-sb-feedback="agreeTerms:required">Anda harus setuju
+                                dengan syarat dan ketentuan.</div>
+                        </div>
+                        <div class="d-none" id="submitSuccessMessage">
+                            <div class="text-center mb-3">
+                                <div class="fw-bolder">Registrasi berhasil!</div>
+                                <p>Selamat datang di komunitas anime kami.</p>
+                            </div>
+                        </div>
+                        <div class="d-none" id="submitErrorMessage">
+                            <div class="text-center text-danger mb-3">Error saat registrasi!</div>
+                        </div>
+                        <div class="d-grid">
+                            <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Daftar</button>
+                        </div>
+                        <div class="text-center mt-3">
+                            <a href="login.html">Sudah punya akun? Login di sini</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

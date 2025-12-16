@@ -13,6 +13,7 @@ Rombel: TI07
 - [07_link_figma](https://www.figma.com/site/rQO9BkDnHH78yoPwddT4oR/UIUX_01_AriaFatah?node-id=0-1&t=tYxOyxlMKTSxjKRJ-1) - [preview](./07_figma/images/README/image.png)
 - [sc_tugas_08_praktikum_js](https://github.com/ariafatah0711/praktikum_uiux/tree/main/08_praktikum_js) - [preview](https://ariaf.my.id/praktikum_uiux/08_praktikum_js)
 - [sc_tugas_09_praktikum_oop](https://github.com/ariafatah0711/praktikum_uiux/tree/main/09_praktikum_oop) - [preview](https://ariaf.my.id/praktikum_uiux/09_praktikum_oop)
+- [sc_tugas_10_praktikum_rwd](https://github.com/ariafatah0711/praktikum_uiux/tree/main/10_praktikum_rwd) - [preview](https://ariaf.my.id/praktikum_uiux/10_praktikum_rwd)
 
 ## latihan di kelas
 - [sc_lat_praktikum_01](https://github.com/ariafatah0711/praktikum_uiux/tree/main/latihan/01) - [preview](https://ariaf.my.id/praktikum_uiux/latihan/01)
