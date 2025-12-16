@@ -40,10 +40,13 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="01_index.html">Home</a>
+                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="01_form.html">Form</a>
+                            <a class="nav-link" href="signup.html">Registrasi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="login.html">Login</a>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
@@ -58,47 +61,44 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="my-4 text-center">Form Login - by Aria</h1>
+                <h1 class="my-4 text-center">Login</h1>
                 <div class="container px-5 my-5">
-                    <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                    <form id="loginForm" data-sb-form-api-token="API_TOKEN">
                         <div class="mb-3">
                             <label class="form-label" for="emailAddress">Email Address</label>
                             <input class="form-control" id="emailAddress" type="email" placeholder="Email Address"
                                 data-sb-validations="required,email" />
-                            <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is
-                                required.</div>
-                            <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is
-                                not valid.</div>
+                            <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
+                            <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address is not valid.</div>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label" for="passwird">Passwird</label>
-                            <input class="form-control" id="passwird" type="text" placeholder="Passwird"
+                            <label class="form-label" for="password">Password</label>
+                            <input class="form-control" id="password" type="password" placeholder="Password"
                                 data-sb-validations="required" />
-                            <div class="invalid-feedback" data-sb-feedback="passwird:required">Passwird is required.
-                            </div>
+                            <div class="invalid-feedback" data-sb-feedback="password:required">Password is required.</div>
                         </div>
                         <div class="mb-3">
                             <label class="form-label d-block"></label>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" id="ingatSaya" type="checkbox" name=""
-                                    data-sb-validations="" />
-                                <label class="form-check-label" for="ingatSaya">ingat saya</label>
+                                <input class="form-check-input" id="rememberMe" type="checkbox" name="rememberMe" />
+                                <label class="form-check-label" for="rememberMe">Ingat Saya</label>
                             </div>
                         </div>
                         <div class="d-none" id="submitSuccessMessage">
                             <div class="text-center mb-3">
-                                <div class="fw-bolder">Form submission successful!</div>
-                                <p>To activate this form, sign up at</p>
-                                <a
-                                    href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                <div class="fw-bolder">Login berhasil!</div>
+                                <p>Selamat datang kembali.</p>
                             </div>
                         </div>
                         <div class="d-none" id="submitErrorMessage">
-                            <div class="text-center text-danger mb-3">Error sending message!</div>
+                            <div class="text-center text-danger mb-3">Error saat login!</div>
                         </div>
                         <div class="d-grid">
-                            <button class="btn btn-primary btn-lg disabled" id="submitButton"
-                                type="submit">Submit</button>
+                            <button class="btn btn-primary btn-lg" id="submitButton"
+                                type="submit">Login</button>
+                        </div>
+                        <div class="text-center mt-3">
+                            <a href="signup.html">Belum punya akun? Daftar di sini</a>
                         </div>
                     </form>
                 </div>
